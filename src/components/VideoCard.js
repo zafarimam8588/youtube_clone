@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Video = ({info}) => {
-  console.log(info)
+  // console.log(info)
 
   const snippet = info?.snippet;
   const statistics = info?.statistics;

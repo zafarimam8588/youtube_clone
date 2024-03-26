@@ -1,5 +1,29 @@
 // require("dotenv").config();
 
+export const tags = [
+    'All',
+    'Music',
+    'Cricket',
+    'Namaste JavaScript',
+    'React js',
+    'Redux',
+    'Frontend Engineer',
+    'Coding',
+    'Counter-Strike',
+    'CSS',
+    'HTML',
+    'Live',
+    'News',
+    'football',
+    'Web Developer',
+    'street food',
+    'next js',
+    'traversy media',
+    'csgo',
+    'source 2',
+  ];
+  
+
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 

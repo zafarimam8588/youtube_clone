@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeMenu } from "../utils/appSlice";
+import { toggleSideBar } from "../utils/appSlice";
 import { YOUTUBE_VIDEO_BY_ID } from "../utils/contants";
 import { useSearchParams } from "react-router-dom";
 import { CommentsContainer } from "./CommentsContainer";
 import VideoDescription from "./VideoDescription";
 import LiveChat from "./LiveChat";
+import SidebarExpended from "./SidebarExpended";
 
 const WatchPage = () => {
   const [videoInfo, setVideoInfo] = useState();
@@ -13,9 +14,13 @@ const WatchPage = () => {
   const [searchParams] = useSearchParams();
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
+  const isSideBarOpen = useSelector((store) => store.app.isSideBarOpen);
+
   useEffect(() => {
-    dispatch(closeMenu());
-  }, [isMenuOpen]);
+    if (isSideBarOpen) {
+      dispatch(toggleSideBar());
+    }
+  }, []);
 
   useEffect(() => {
     getVideoInfo();
@@ -30,6 +35,7 @@ const WatchPage = () => {
 
   return (
     <>
+    <SidebarExpended/>
     <div className="flex w-full">
     <div className={` ${isMenuOpen ? "w-[576px]" : "w-[972px]"} w-full`}>
         <div className="m-5">
