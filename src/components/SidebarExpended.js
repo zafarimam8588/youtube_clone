@@ -41,7 +41,7 @@ const SidebarExpended = () => {
   };
 
   return (
-    <div className={!isSideBarOpen && "hidden"}>
+    <div className={!isSideBarOpen && "hidden" }>
       <div
         className="w-full h-full bg-black/40 absolute top-0 left-0 z-10"
         onClick={toggleSideBarHandler}

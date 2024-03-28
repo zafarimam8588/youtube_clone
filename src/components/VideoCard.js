@@ -64,7 +64,7 @@ const Video = ({video}) => {
         `/channels?part=snippet&id=${channelId}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
     );
     const data = await response.json();
-    console.log(data)
+    // console.log(data)
     if (response.ok && data?.items?.length > 0) {
       return data.items[0].snippet.thumbnails?.default?.url;
     } else {

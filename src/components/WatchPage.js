@@ -11,6 +11,7 @@ import { useQuery } from "@tanstack/react-query";
 import LiveChat from "./LiveChat"
 
 const WatchPage = () => {
+  // IMPLEMENT LIVE CHAT
 
 
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ const WatchPage = () => {
         className={`min-h-[calc(100vh-4.62rem)] dark:bg-zinc-900 dark:text-white grid grid-cols-12 md:gap-x-8 px-4 md:px-12 2xl:px-24 gap-y-4 pt-4 overflow-x-hidden`}
       >
           <div className="col-span-12 lg:col-span-8  ">
-            <div className="video mb-4 ">
+            <div className="mb-4 ">
               <div className="player mb-4 h-[32vh] md:h-[50vh] lg:h-[50vh] 2xl:h-[70vh]">
                   <iframe
                     width="100%"
