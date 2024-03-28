@@ -61,7 +61,7 @@ const Head = () => {
   const getSearchSuggestion = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
-    console.log(json[1]);
+    // console.log(json[1]);
     setSuggestions(json[1]);
     dispatch(
       cacheResults({
@@ -127,7 +127,7 @@ const Head = () => {
             {suggestions.map((s) => (
               <li
                 key={s}
-                className="py-2 px-3 shadow-sm hover:bg-gray-200 font-semibold flex "
+                className="py-2 px-3 shadow-sm hover:bg-gray-200 font-semibold flex  dark:hover:bg-gray-800"
               >
                 <TfiSearch className=" text-center mt-1 mr-4" /> {s}{" "}
               </li>
