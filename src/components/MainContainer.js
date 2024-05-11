@@ -1,11 +1,10 @@
-import React from 'react'
-import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
+import Tags from './Tags';
 
 const MainContainer = () => {
   return (
     <div>
-        <ButtonList/>
+        <Tags/>
         <VideoContainer/>
     </div>
   )

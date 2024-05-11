@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import SideBarExpanded from "./SidebarExpended";
 import { BASE_URL } from "../utils/contants";
@@ -12,6 +12,7 @@ import LiveChat from "./LiveChat"
 
 const WatchPage = () => {
   // IMPLEMENT LIVE CHAT
+  const [isLiveChatVisible,setIsLiveChatVisible] = useState(false)
 
 
   const dispatch = useDispatch();
@@ -79,6 +80,14 @@ const WatchPage = () => {
             />
           </div>
           <div className="col-span-12 lg:col-span-4 ">
+            <div className="mb-4">
+              <button
+              className="ml-32 bg-gradient-to-r from-purple-500 to-blue-500 border-2 border-gradient-tl-blue-purple hover:from-blue-600 hover:to-purple-600 hover:border-gradient-tr-blue-purple text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out" 
+                onClick={()=> setIsLiveChatVisible((prev)=> !prev)}>
+                {isLiveChatVisible ? "Hide Live Chat" : "Show Live chat"}
+              </button>
+                {isLiveChatVisible && <LiveChat/>}
+            </div>
             <VideoSuggestions videoId={videoId} videoTitle={videoDetails?.snippet?.title} />
           </div>
       </div>

@@ -44,6 +44,13 @@ const Head = () => {
       dispatch(changeCategory(searchText));
     }
   };
+  const handleSetHomeVideoBySuggestion = (s) => {
+    if (category !== s) {
+      dispatch(changeCategory(s));
+    }
+  };
+
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       if (searchcache[searchQuery]) {
@@ -127,6 +134,7 @@ const Head = () => {
             {suggestions.map((s) => (
               <li
                 key={s}
+                onClick={()=> console.log("clicked")}
                 className="py-2 px-3 shadow-sm hover:bg-gray-200 font-semibold flex  dark:hover:bg-gray-800"
               >
                 <TfiSearch className=" text-center mt-1 mr-4" /> {s}{" "}

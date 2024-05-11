@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import moment from "moment";
 
 import { BiCaretDown, BiCaretUp, BiDislike, BiLike } from "react-icons/bi";
@@ -7,6 +7,8 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Comment = ({ commentData }) => {
   const [showReplies, setShowReplies] = useState(false);
+  const inputRef = useRef(2);
+  console.log(inputRef)
   console.log(commentData);
   return (
     <div className=" mb-6">

@@ -8,14 +8,17 @@ import { BASE_URL } from "../utils/contants";
 import { Link } from "react-router-dom";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import useScroll from "../utils/useScroll";
+import useIntersectionObserver from "./../utils/useIntersectionObserver";
 
 const VideoContainer = () => {
   
   const {category} = useSelector(store => store.videoCategory);
   const bottomRef = useRef(null);
+  // console.log("------------------------------------")
   // console.log(bottomRef)
   
 
+  const onScreen = useIntersectionObserver(bottomRef, { threshold: 0.5 });
 
   const getVideoes = async(nextPageToken = "")=>{
     try{
@@ -67,15 +70,13 @@ const VideoContainer = () => {
   // console.log(data);
 
 
-  useScroll(bottomRef,fetchNextPage)
+  onScreen && fetchNextPage()
   
   return isLoading ? (
       <Shimmer/>
     ) : (
       <div
-      className=" grid justify-center justify-items-center grid-cols-[repeat(auto-fill,minmax(310px,_1fr))] max-xl:grid-cols-[repeat(auto-fill,minmax(250px,_1fr))] gap-[2rem_1rem] 
-      pt-6 px-8 overflow-x-hidden"
-      >
+      className=" flex flex-wrap gap-x-4 gap-y-8 pt-6 px-8 overflow-x-hidden ">
         {isSuccess && 
           data?.pages.map((page,index)=>{
             return (
@@ -86,7 +87,7 @@ const VideoContainer = () => {
                       return (
                         <Link
                           ref={bottomRef}
-                          className="w-full"
+                          className="w-[32%]"
                           to={`/watch?v=${video?.id?.videoId || video?.id}`}
                           key={video?.id?.videoId || video?.id}
                         >
@@ -96,7 +97,7 @@ const VideoContainer = () => {
                     } else {
                       return (
                         <Link
-                          className="w-full"
+                        className="w-[32%]"
                           to={`/watch?v=${video?.id?.videoId || video?.id}`}
                           key={video?.id?.videoId || video?.id}
                         >

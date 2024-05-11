@@ -22,7 +22,7 @@ const LiveChat = () => {
     },[])
   return (
     <>
-        <div className="flex ">
+        <div className="flex  ">
           <img
             className="w-8 h-8 mr-1 pt-2"
             alt="chat-icon"
@@ -30,7 +30,7 @@ const LiveChat = () => {
           />
           <h1 className="font-bold py-1.5 text-xl">Live Chat:</h1>
         </div>
-        <div className="ml-2 p-2 border border-slate-300 h-[408px] w-full bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
+        <div className="dark:text-zinc-800 ml-2 p-2 border border-slate-300 h-[408px] w-full bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
           {chatMessages?.map((message,index)=>{
             return <ChatMessage key={index} name={message.name} message={message.message}/>
           })}

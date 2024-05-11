@@ -83,9 +83,9 @@ const Video = ({video}) => {
     cacheTime: 1000 * 60 * 60 * 24,
   });
   return (
-    <div className="video w-full cursor-pointer h-fit">
+    <div className="video cursor-pointer h-fit">
       {/* Thumbnail Starts */}
-      <div className="video__thumbnail  relative">
+      <div className=" relative">
         <img
           src={medium.url}
           className="rounded-xl w-full"

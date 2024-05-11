@@ -81,7 +81,7 @@ const Comments = ({videoId,commentCount}) => {
         </div>
       ) : (
          <button
-          className="w-full font-bold bg-gray-200 dark:bg-zinc-700 rounded-3xl px-4 py-1"
+          className="w-full font-bold bg-gray-200 dark:bg-zinc-700 rounded-3xl px-4 py-1 mb-2"
           onClick={fetchNextPage}
         >
           Show More
