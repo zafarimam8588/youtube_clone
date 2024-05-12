@@ -3,7 +3,7 @@ import Tags from './Tags';
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className="">
         <Tags/>
         <VideoContainer/>
     </div>

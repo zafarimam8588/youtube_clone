@@ -73,10 +73,12 @@ const VideoContainer = () => {
   onScreen && fetchNextPage()
   
   return isLoading ? (
+    <div>
       <Shimmer/>
+    </div>
     ) : (
       <div
-      className=" flex flex-wrap gap-x-4 gap-y-8 pt-6 px-8 overflow-x-hidden ">
+      className=" flex flex-wrap gap-x-4 gap-y-8 pt-6 px-4  ">
         {isSuccess && 
           data?.pages.map((page,index)=>{
             return (
@@ -87,7 +89,7 @@ const VideoContainer = () => {
                       return (
                         <Link
                           ref={bottomRef}
-                          className="w-[32%]"
+                          className="xs:w-full sm:w-[45%] md:w-[45%] lg:w-[32%] "
                           to={`/watch?v=${video?.id?.videoId || video?.id}`}
                           key={video?.id?.videoId || video?.id}
                         >
@@ -97,7 +99,7 @@ const VideoContainer = () => {
                     } else {
                       return (
                         <Link
-                        className="w-[32%]"
+                        className="xs:w-full sm:w-[45%] md:w-[45%] lg:w-[32%]"
                           to={`/watch?v=${video?.id?.videoId || video?.id}`}
                           key={video?.id?.videoId || video?.id}
                         >
