@@ -66,18 +66,3 @@ Follow these steps to get the project up and running locally:
 
 - **Homepage**
 - **Search Results**
-
-## Folder Structure
-
-youtube-clone/
-├── public/
-├── src/
-│ ├── components/ # Reusable components (e.g., VideoCard, Navbar)
-│ ├── pages/ # Pages (e.g., Home, SearchResults)
-│ ├── redux/ # Redux slices and store setup
-│ ├── utils/ # Utility functions (e.g., API calls, debouncing)
-│ ├── App.js # Main app component
-│ └── index.js # Entry point
-├── .env # Environment variables
-├── package.json # Dependencies and scripts
-└── README.md # Project documentation
