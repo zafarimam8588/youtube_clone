@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# YouTube Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive and performant video streaming application built with React, leveraging the YouTube Live API for fetching and displaying video streams. The application mimics core functionalities of YouTube, providing an engaging user experience with advanced features like optimized search and data caching.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Live Video Streaming**: Fetches and displays live video streams using the YouTube Live API.
+- **Search Optimization**: Enhanced search functionality with debouncing for better performance and user experience.
+- **Data Caching**: Implements Tanstack Query to minimize network calls and improve app performance.
+- **Responsive Design**: Fully responsive UI built with Tailwind CSS, ensuring compatibility across devices.
+- **State Management**: Efficiently handles app state with Redux for seamless user interactions.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React, JavaScript, Tailwind CSS
+- **State Management**: Redux
+- **API Integration**: YouTube Live API
+- **Caching**: Tanstack Query
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Follow these steps to get the project up and running locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v16 or above)
+- NPM or Yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```sh
+   git clone https://github.com/zafarimam8588/youtube_clone.git
+   cd youtube-clone
+   ```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a `.env` file in the root directory and add your YouTube API key:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```env
+   REACT_APP_YOUTUBE_API_KEY=your_api_key_here
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Run the application:
 
-## Learn More
+   ```sh
+   npm start
+   # or
+   yarn start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+- **Homepage**
+- **Search Results**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Folder Structure
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+youtube-clone/
+├── public/
+├── src/
+│ ├── components/ # Reusable components (e.g., VideoCard, Navbar)
+│ ├── pages/ # Pages (e.g., Home, SearchResults)
+│ ├── redux/ # Redux slices and store setup
+│ ├── utils/ # Utility functions (e.g., API calls, debouncing)
+│ ├── App.js # Main app component
+│ └── index.js # Entry point
+├── .env # Environment variables
+├── package.json # Dependencies and scripts
+└── README.md # Project documentation
