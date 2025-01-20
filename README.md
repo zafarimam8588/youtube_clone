@@ -1,5 +1,13 @@
 # YouTube Clone
 
+## Homepage
+
+![Screenshot](public/screenshot/youtube_sc1.png)
+
+## Video Detail Page
+
+![Screenshot](public/screenshot/youtube_sc2.png)
+
 A responsive and performant video streaming application built with React, leveraging the YouTube Live API for fetching and displaying video streams. The application mimics core functionalities of YouTube, providing an engaging user experience with advanced features like optimized search and data caching.
 
 ## Features
